@@ -17,7 +17,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -26,18 +26,61 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>jQuery</li>
-      </ul>
+
+    <div class="wrapper">
+
+      <header class="top">
+        <h1><a href="#">Mobile friendly flexbox layout</a></h1>
+      </header>
+
+      <nav class="flex-nav">
+        <a href="#" class="toggle-nav">☰ Menu</a>
+        <ul>
+          <li><a href="#">One Thing</a></li>
+          <li><a href="#">Another Thing</a></li>
+          <li><a href="#">And Another One</a></li>
+          <li><a href="#">DJ Khaled</a></li>
+          <li class="social">
+            <a href="//twitter.com/stefanodevuono">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="social">
+            <a href="mailto:io@stefanodevuono.com/">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+          <li class="social">
+            <a href="//github.com/stefanodevuono">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="hero">
+        <img src="//lorempixel.com/1000/600/abstract" alt="">
+      </section>
+
+      <section class="details">
+        <p>A simple video course to help you master FlexBox.</p>
+        <p>Sign up today to grab all the videos and exercises!</p>
+      </section>
+
+      <section class="signup">
+        <form action="" class="signup">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Email Address">
+          <input type="submit" value="Sign me up!">
+        </form>
+      </section>
+
+      <footer>
+        <p>&copy; Stefano De Vuono</p>
+      </footer>
+
     </div>
-    
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -53,7 +96,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
