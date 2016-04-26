@@ -28,14 +28,16 @@
     <![endif]-->
 
     <div class="wrapper">
-
+      <input type="checkbox" id="toggle-nav" class="nav-checkbox">
       <header class="top">
         <h1><a href="#">Mobile friendly flexbox layout</a></h1>
       </header>
 
+      <!-- <div class="height-test"></div> -->
+
       <nav class="flex-nav">
-        <a href="#" class="toggle-nav">☰ Menu</a>
-        <ul>
+        <label for="toggle-nav" class="toggle-nav">☰ Menu</label>
+        <ul class="nav-menu">
           <li><a href="#">One Thing</a></li>
           <li><a href="#">Another Thing</a></li>
           <li><a href="#">And Another One</a></li>
@@ -98,7 +100,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" async></script>
     <!-- endbuild -->
   </body>
 </html>

@@ -1,21 +1,13 @@
 // bower:scss
 // endbower
 
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
-@import "variables";
-@import "mixins";
-@import "path";
-@import "core";
-@import "larger";
-@import "fixed-width";
-@import "list";
-@import "bordered-pulled";
-@import "animated";
-@import "rotated-flipped";
-@import "stacked";
-@import "icons";
-@import "screen-reader";
+$purple-gradient: linear-gradient(260deg, black, #c16ecf 100%);
 
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
+
+@import "fontawesome/_fontawesome";
+
+@import "_animation";
 
 html {
   box-sizing: border-box;
@@ -28,7 +20,7 @@ html {
 body {
   font-family: "Fira Sans", sans-serif;
   margin: 0;
-  background-image: linear-gradient(260deg, black, #c16ecf 100%);
+  background-image: $purple-gradient;
 }
 
 a {
@@ -36,14 +28,14 @@ a {
   font-weight: 100;
   letter-spacing: 2px;
   text-decoration: none;
-  background: rgba(0,0,0,.2);
+  // background: rgba(0,0,0,.2);
   padding: 20px, 5px;
   display: inline-block;
   width: 100%;
   text-align: center;
   transition: all .5s;
   &:hover {
-    background: rgba(0,0,0,.3);
+    // background: rgba(0,0,0,.3);
   }
 }
 
@@ -123,12 +115,12 @@ section, footer {
   }
   .flex-nav {
     order: 1;
-    ul {
-      display:none;
-      &.open {
-        display: flex;
-      }
-    }
+    // ul {
+    //   display:none;
+    //   &.open {
+    //     display: flex;
+    //   }
+    // }
   }
 
   .toggle-nav {
