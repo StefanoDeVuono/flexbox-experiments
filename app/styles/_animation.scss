@@ -11,12 +11,30 @@ $menu-rows: 6;
     transform: translateY(0%);
   }
 }
+// animation
+@keyframes dropup {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+
+    transform: translateY(-100%);
+  }
+}
 @keyframes pushdown {
   from {
     margin-top: 0;
   }
   to {
     margin-top: $line-height * $menu-rows;
+  }
+}
+@keyframes pushup {
+  from {
+    margin-top: $line-height * $menu-rows;
+  }
+  to {
+    margin-top: 0;
   }
 }
 
@@ -61,4 +79,11 @@ $menu-rows: 6;
 
 .nav-checkbox:checked + .top  {
   animation: pushdown 1s both;
+}
+.nav-checkbox ~ .flex-nav .nav-menu {
+  animation: dropup 1s both;
+}
+
+.nav-checkbox + .top  {
+  animation: pushup 1s both;
 }
