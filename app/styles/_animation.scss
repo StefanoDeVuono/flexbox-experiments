@@ -38,52 +38,47 @@ $menu-rows: 6;
   }
 }
 
-// css
-.height-test {
-  position: fixed;
-  background: black;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 50%;
-  height: $menu-rows * $line-height;
-}
-.flex-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  line-height: $line-height;
-}
-.toggle-nav {
+@media all and (max-width: 500px) {
+  .flex-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: $line-height;
+  }
+  .toggle-nav {
 
-  // height: 1.8em;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  background-image: $purple-gradient;
-  z-index: 10;
+    // height: 1.8em;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    background-image: $purple-gradient;
+    z-index: 10;
+  }
+  .nav-menu {
+    position: relative;
+    transform: translateY(-100%);
+    z-index: -1;
+  }
+  .nav-checkbox:checked ~ .flex-nav .nav-menu {
+    animation: dropdown 1s both;
+  }
+
+  .nav-checkbox:checked + .top  {
+    animation: pushdown 1s both;
+  }
+  .nav-checkbox ~ .flex-nav .nav-menu {
+    animation: dropup 1s both;
+  }
+
+  .nav-checkbox + .top  {
+    animation: pushup 1s both;
+  }
 }
+
+// css
+
+
 .nav-checkbox {
   display: none;
-}
-.nav-menu {
-  position: relative;
-  transform: translateY(-100%);
-  z-index: -1;
-}
-
-.nav-checkbox:checked ~ .flex-nav .nav-menu {
-  animation: dropdown 1s both;
-}
-
-.nav-checkbox:checked + .top  {
-  animation: pushdown 1s both;
-}
-.nav-checkbox ~ .flex-nav .nav-menu {
-  animation: dropup 1s both;
-}
-
-.nav-checkbox + .top  {
-  animation: pushup 1s both;
 }
